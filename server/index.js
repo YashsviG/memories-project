@@ -17,11 +17,14 @@ dotenv.config();
 
 app.use('/posts', postsRoutes);
 
+app.get('/', (req, res) => {
+    res.send('Hello to memories API');
+})
 const CONNECTION_URL = process.env.CONNECTION_URL
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 mongoose.connect(CONNECTION_URL, {useNewUrlParser: true, useUnifiedTopology: true})
-.then(() => app.listen(PORT, () => console.log(`Server is running on: ${PORT}`)))
+.then(() => app.listen(process.env.PORT || 5000, () => console.log(`Server is running on: ${PORT}`)))
 .catch((err) => console.log(err.message));
 
 mongoose.set('useFindAndModify', false);
