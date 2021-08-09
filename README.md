@@ -1,7 +1,7 @@
 # Memories App
 
 ## Tech Stack
-* MERN Application
+* [MERN](https://www.mongodb.com/mern-stack) Application
 * [MongoDB](https://mongodb.com/)
 * [Expressjs](https://expressjs.com/)
 * [Reactjs](https://www.react.com/)
