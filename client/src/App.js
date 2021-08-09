@@ -9,7 +9,6 @@ import Posts from './components/Posts/Posts.js';
 import memories from './images/memories.png';
 
 import useStyles from './styles.js';
-import { display } from '@material-ui/system';
 
 const App = () => {
     const [currentId, setCurrentId] = useState(null);
@@ -18,7 +17,7 @@ const App = () => {
 
     useEffect(() =>  {
         dispatch(getPosts());
-    }, [dispatch]);
+    }, [currentId, dispatch]);
     return (
         <Container maxWidth="lg">
           <AppBar className={classes.appBar} position="static" color="inherit">
